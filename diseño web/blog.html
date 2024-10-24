@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        nav {
+            background-color: #1e1e1e;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px;
+            background-color: #333;
+            color: #ffffff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #cccccc;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .blog-post {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .blog-post img:hover {
+            transform: scale(1.05);
+        }
+
+        .blog-post h3 {
+            margin-top: 15px;
+            font-size: 1.6em;
+            color: #ff6600;
+        }
+
+        .blog-post p {
+            color: #cccccc;
+        }
+
+        .read-more-button {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .read-more-button:hover {
+            background-color: #ff5500;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Blog de la Comunidad</h1>
+        <p>Descubre las últimas noticias, guías y artículos sobre tus juegos favoritos</p>
+    </header>
+
+    <main>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <img src="imagenes/god-war-consejos-apertura.webp" alt="Blog 1">
+                <h3>Los mejores trucos para mejorar tu habilidad en juegos de acción</h3>
+                <p>Descubre cómo mejorar tus reflejos y estrategias en juegos de acción con esta guía completa.</p>
+                <a href="blog-post1.html" class="read-more-button">Leer más</a>
+            </div>
+
+            <div class="blog-post">
+                <img src="imagenes/l2.jpg" alt="Blog 2">
+                <h3>Explorando el mundo abierto: Juegos que no puedes perderte</h3>
+                <p>Te contamos cuáles son los mejores juegos de mundo abierto para explorar nuevas fronteras.</p>
+                <a href="blog-post2.html" class="read-more-button">Leer más</a>
+            </div>
+
+            <div class="blog-post">
+                <img src="imagenes/blog.png.jpg" alt="Blog 3">
+                <h3>¿Qué hace a un juego de estrategia irresistible?</h3>
+                <p>Analizamos los elementos clave que hacen que los juegos de estrategia sean tan adictivos.</p>
+                <a href="blog-post3.html" class="read-more-button">Leer más</a>
+            </div>
+
+            <div class="blog-post">
+                <img src="imagenes/blog2.png.webp" alt="Blog 4">
+                <h3>Consejos para jugar en equipo: ¡Mejora la coordinación!</h3>
+                <p>Aprende cómo comunicarte mejor con tu equipo y ganar más partidas juntos.</p>
+                <a href="blog-post4.html" class="read-more-button">Leer más</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Plataforma de Juegos. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

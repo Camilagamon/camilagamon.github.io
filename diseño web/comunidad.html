@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(241, 245, 243);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #1a1919;
+            color: rgb(13, 212, 169);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .post-card {
+            background-color: rgba(41, 34, 32, 0.781);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(4, 241, 162, 0.747);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .post-header img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .post-header h3 {
+            margin: 0;
+            color: #00ff88; /* Verde agua */
+        }
+
+        .post-content {
+            margin-top: 15px;
+            color: #00ff88; /* Verde agua */
+        }
+
+        .post-actions {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .like-button, .comment-button {
+            background-color: orange; /* Naranja */
+            color: white;
+            padding: 5px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none; /* Sin borde */
+            cursor: pointer; /* Cursor de puntero */
+        }
+
+        .like-button:hover, .comment-button:hover {
+            background-color: #ffcc00; /* Color naranja más claro al pasar el ratón */
+        }
+
+        .comment-section {
+            margin-top: 10px;
+        }
+
+        .comment-section input {
+            width: 80%;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .comment-section button {
+            padding: 5px 10px;
+            background-color: orange; /* Naranja */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Comunidad</h1>
+        <p>Únete a la conversación y descubre lo que otros jugadores están compartiendo</p>
+    </header>
+
+    <main>
+        <div class="post-grid">
+            <div class="post-card">
+                <div class="post-header">
+                    <img src="imagenes/usuario.png.png" alt="Usuario 1">
+                    <h3>Usuario123</h3>
+                </div>
+                <div class="post-content">
+                    <p>¡Acabo de terminar la misión más difícil en el juego de acción! ¿Alguien más lo ha intentado?</p>
+                </div>
+                <div class="post-actions">
+                    <button class="like-button" onclick="toggleLike(this)">Me gusta <span class="like-count">0</span></button>
+                    <a href="#" class="comment-button" onclick="showCommentSection(this)">Comentar</a>
+                </div>
+                <div class="comment-section" style="display: none;">
+                    <input type="text" placeholder="Escribe un comentario...">
+                    <button onclick="addComment(this)">Enviar</button>
+                </div>
+                <div class="comments-display"></div>
+            </div>
+
+            <div class="post-card">
+                <div class="post-header">
+                    <img src="imagenes/usuario.png.png" alt="Usuario 2">
+                    <h3>GamerPro45</h3>
+                </div>
+                <div class="post-content">
+                    <p>¡Nuevo récord en Racing Turbo! Alcancé 300 km/h en la pista más difícil. ¡Aquí está mi tiempo!</p>
+                </div>
+                <div class="post-actions">
+                    <button class="like-button" onclick="toggleLike(this)">Me gusta <span class="like-count">0</span></button>
+                    <a href="#" class="comment-button" onclick="showCommentSection(this)">Comentar</a>
+                </div>
+                <div class="comment-section" style="display: none;">
+                    <input type="text" placeholder="Escribe un comentario...">
+                    <button onclick="addComment(this)">Enviar</button>
+                </div>
+                <div class="comments-display"></div>
+            </div>
+
+            <div class="post-card">
+                <div class="post-header">
+                    <img src="imagenes/usuario.png.png" alt="Usuario 3">
+                    <h3>MasterRPG</h3>
+                </div>
+                <div class="post-content">
+                    <p>Si alguien está interesado en unirse a una partida de Mundo de Fantasía, estoy organizando un equipo para el fin de semana. ¡Dejen sus nombres!</p>
+                </div>
+                <div class="post-actions">
+                    <button class="like-button" onclick="toggleLike(this)">Me gusta <span class="like-count">0</span></button>
+                    <a href="#" class="comment-button" onclick="showCommentSection(this)">Comentar</a>
+                </div>
+                <div class="comment-section" style="display: none;">
+                    <input type="text" placeholder="Escribe un comentario...">
+                    <button onclick="addComment(this)">Enviar</button>
+                </div>
+                <div class="comments-display"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Plataforma de Juegos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleLike(button) {
+            const likeCount = button.querySelector('.like-count');
+            let count = parseInt(likeCount.innerText);
+            count++;
+            likeCount.innerText = count;
+        }
+
+        function showCommentSection(button) {
+            const commentSection = button.closest('.post-card').querySelector('.comment-section');
+            commentSection.style.display = commentSection.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function addComment(button) {
+            const commentInput = button.previousElementSibling;
+            const commentText = commentInput.value;
+            if (commentText) {
+                const commentsDisplay = button.closest('.post-card').querySelector('.comments-display');
+                commentsDisplay.innerHTML += `<p>${commentText}</p>`;
+                commentInput.value = ''; // Clear the input
+            }
+        }
+    </script>
+
+</body>
+</html>

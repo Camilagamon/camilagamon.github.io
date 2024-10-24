@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZONE PLAY</title>
+    
+    <!-- Fuente Gamer "Press Start 2P" -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Fuente general: Arial */
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: white;
+        }
+
+        nav {
+            background-color: #1c1c1c;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00fff2;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background-image: linear-gradient(to bottom right, #141414, #0c0c0c);
+            color: white;
+            position: relative;
+        }
+
+        header img {
+            max-width: 150px; 
+            height: auto; 
+            margin-bottom: 20px; 
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #ff8000; 
+
+            font-family: 'Press Start 2P', cursive; 
+        }
+
+        header p {
+            font-size: 1.5em;
+        }
+
+        .featured-section {
+            padding: 20px;
+            background-color: #222;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .featured-section h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #00e0e0;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .featured-item {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid #325a51; 
+        }
+
+        .featured-item img {
+            width: 100%;
+            border-radius: 10px;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .featured-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .featured-item h3 {
+            margin-top: 10px;
+            font-size: 1.8em;
+        }
+
+        .featured-item p {
+            color: #ddd;
+        }
+
+        .news-section {
+            padding: 20px;
+            background-image: linear-gradient(to bottom right, #444, #222);
+            text-align: center;
+        }
+
+        /* Cambiar el color de "Últimas Noticias" a naranja */
+        .news-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff8000; /* Color naranja */
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .news-item {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .news-item:hover {
+            transform: scale(1.05);
+        }
+
+        .news-item h4 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+
+        .buy-button {
+            background-color: rgb(255, 128, 0);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #00ffc8;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="imagenes/logo2.png.webp" alt="Logo de ZONE PLAY"> 
+        <h1>ZP</h1> <!-- Solo "ZP" tiene la fuente gamer -->
+        <p>"Más que juegos, experiencias: ¡únete a la comunidad gamer!".</p>
+    </header>
+
+    <section class="featured-section">
+        <h2>Destacados</h2>
+        <div class="featured-grid">
+            <div class="featured-item">
+                <img src="imagenes/g1 (1).jpg" alt="Juego Destacado 1">
+                <h3>CALL OF DUTTY</h3>
+                <p>Videojuego de acción-aventura.</p>
+                <a href="#" class="buy-button">Comprar</a>
+            </div>
+            <div class="featured-item">
+                <img src="imagenes/g2.jpg" alt="Juego Destacado 2">
+                <h3>BATTLEFIELD</h3>
+                <p>Videojuego de disparos en primera persona que regresa a la emblemática guerra total de la franquicia, ofreciendo combates a gran escala.</p>
+                <a href="#" class="buy-button">Comprar</a>
+            </div>
+            <div class="featured-item">
+                <img src="imagenes/g4.jpg" alt="Juego Destacado 3">
+                <h3>FORNITE</h3>
+                <p>Hacerse con armas, construir fuertes y abatir al resto de jugadores.</p>
+                <a href="#" class="buy-button">Comprar</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <h2>Últimas Noticias</h2>
+        <div class="news-grid">
+            <div class="news-item">
+                <h4>Actualización de FORNITE</h4>
+                <p>La actualización de Fortnite en octubre 2024 incluye nuevas armas como la Sierra Mecánica y Boom Billy, inspiradas en Saw, junto con el regreso del modo Horde Rush. Además, hemos agregado skins de Halloween como Edward Scissorhands y Maléfica, y nuevos desafíos con recompensas exclusivas</p>
+            </div>
+            <div class="news-item">
+                <h4>Evento Especial</h4>
+                <p>Participa en nuestro evento especial de fin de semana.</p>
+            </div>
+            <div class="news-item">
+                <h4>Nuevo Juego Lanzado</h4>
+                <p>No te pierdas el lanzamiento de nuestro nuevo juego.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tu Plataforma de Juegos. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

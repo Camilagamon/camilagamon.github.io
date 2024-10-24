@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Tu Plataforma de Juegos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f58403;
+        }
+
+        nav {
+            background-color: #1e1e1e;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00ffcc;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #333;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #cccccc;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #00ffcc;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .event-card {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .event-card h3 {
+            color: #00ffcc;
+            margin-top: 0;
+        }
+
+        .event-card p {
+            color: #cccccc;
+            margin-bottom: 10px;
+        }
+
+        .event-card .event-date {
+            font-weight: bold;
+            color: #ff6600;
+        }
+
+        /* Formulario de registro */
+        .registration-form {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-top: 40px;
+        }
+
+        .registration-form label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .registration-form input,
+        .registration-form select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #333;
+            color: #ffffff;
+            font-size: 1em;
+        }
+
+        .registration-form input[type="submit"] {
+            background-color: #00ffcc;
+            color: #000000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .registration-form input[type="submit"]:hover {
+            background-color: #00e6b8;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Eventos Especiales</h1>
+        <p>Únete a nuestras increíbles actividades y descubre nuevos juegos.</p>
+    </header>
+
+    <main>
+        <h2>Próximos Eventos</h2>
+
+        
+        <div class="event-card">
+            <h3>Torneo de Fortnite</h3>
+            <p class="event-date">Fecha: 15 de noviembre, 2024</p>
+            <p>¡Participa en nuestro torneo de Fortnite y gana premios increíbles! Inscríbete ahora y demuestra tus habilidades.</p>
+        </div>
+
+        <div class="event-card">
+            <h3>Conferencia de Desarrollo de Juegos</h3>
+            <p class="event-date">Fecha: 22 de noviembre, 2024</p>
+            <p>Únete a desarrolladores y jugadores para discutir las últimas tendencias en la industria de los videojuegos.</p>
+        </div>
+
+        <div class="event-card">
+            <h3>Fiesta de Lanzamiento de Juegos</h3>
+            <p class="event-date">Fecha: 30 de noviembre, 2024</p>
+            <p>Celebramos el lanzamiento de nuestro nuevo juego con una fiesta llena de diversión y sorpresas. ¡No te lo pierdas!</p>
+        </div>
+
+        <div class="registration-form">
+            <h3>Regístrate para un Evento</h3>
+            <p>Completa el formulario a continuación para inscribirte en uno de nuestros eventos.</p>
+            <form action="register-event.php" method="post">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+
+                <label for="event">Selecciona el Evento</label>
+                <select id="event" name="event" required>
+                    <option value="torneo_fortnite">Torneo de Fortnite</option>
+                    <option value="conferencia_desarrollo">Conferencia de Desarrollo de Juegos</option>
+                    <option value="fiesta_lanzamiento">Fiesta de Lanzamiento de Juegos</option>
+                </select>
+
+                <input type="submit" value="Registrarse">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Plataforma de Juegos. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

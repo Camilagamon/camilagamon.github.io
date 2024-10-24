@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Juegos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Fondo oscuro */
+            color: #ffffff; /* Texto blanco */
+        }
+
+        nav {
+            background-color: #1e1e1e; /* Color de fondo de la navegación */
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff; /* Texto blanco en los enlaces */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00ffcc; /* Color brillante al pasar el ratón */
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #333; /* Fondo del encabezado */
+            color: #00ffcc; /* Color brillante para el texto del encabezado */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .store-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Cambiado a 300px */
+            gap: 20px;
+        }
+
+        .store-item {
+            background-color: #1e1e1e; /* Fondo de los elementos de la tienda */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.2); /* Sombra brillante */
+            text-align: center;
+        }
+
+        .store-item img {
+            width: 100%; /* Mantiene la imagen al 100% del contenedor */
+            border-radius: 10px;
+            height: auto; /* Cambiado a auto para mantener la proporción de la imagen */
+            max-height: 400px; /* Aumentado para hacer las imágenes más grandes */
+            object-fit: cover; /* Mantiene la proporción de la imagen */
+        }
+
+        .store-item h3 {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #00ffcc; /* Títulos en color brillante */
+        }
+
+        .store-item span {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #ffffff; /* Precio en blanco */
+            font-size: 1.2em;
+        }
+
+        .buy-button {
+            background-color: #ff6600; /* Color del botón */
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #cc5200; /* Color del botón al pasar el ratón */
+        }
+
+        footer {
+            background-color: #1e1e1e; /* Color de fondo del pie de página */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Tienda de Juegos</h1>
+        <p>Compra los mejores juegos al mejor precio</p>
+    </header>
+
+    <main>
+        <div class="store-grid">
+            <div class="store-item">
+                <img src="imagenes/g1 (1).jpg" alt="Juego 1">
+                <h3>CALL OF DUTTY</h3>
+                <span>30.90 bs</span>
+                <a href="#" class="buy-button">Comprar</a>
+            </div>
+
+            <div class="store-item">
+                <img src="imagenes/g2.jpg" alt="Juego 2">
+                <h3>BATTLEFIELD</h3>
+                <span>49.99 bs</span>
+                <a href="#" class="buy-button">Comprar</a>
+            </div>
+
+            <div class="store-item">
+                <img src="imagenes/g3.jpg" alt="Juego 3">
+                <h3>HALD</h3>
+                <span>76.09 bs</span>
+                <a href="#" class="buy-button">Comprar</a>
+            </div>
+
+            <div class="store-item">
+                <img src="imagenes/g4.jpg" alt="Juego 4">
+                <h3>FORNITE</h3>
+                <span>80.50 bs</span>
+                <a href="#" class="buy-button">Comprar</a>
+            </div>
+
+        
+            <div class="store-item">
+                <img src="imagenes/g5.jpg" alt="Juego 5">
+                <h3>CTR</h3>
+                <span>70.00 bs</span>
+                <a href="#" class="buy-button">Comprar</a>
+        </div>
+            
+                 <div class="store-item">
+                <img src="imagenes/g7.jpg" alt="Juego 6">
+                <h3>THE SURGE</h3>
+                <span>59.99 bs</span>
+                <a href="#" class="buy-button">Comprar</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Plataforma de Juegos. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
