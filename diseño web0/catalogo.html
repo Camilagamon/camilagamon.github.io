@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Juegos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #ff7b00; 
+        }
+
+        nav {
+            background-color: #1e1e1e; /* Color de fondo de la navegación */
+            padding: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff; 
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff5e00; 
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #424140;
+            color: #ff8800; 
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 20px;
+        }
+
+        .game-card {
+            background-color: #383737;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.2); 
+            text-align: center;
+        }
+
+        .game-card img {
+            width: 100%; 
+            border-radius: 10px;
+            height: auto;
+            max-height: 400px; 
+            object-fit: cover; 
+        }
+
+        .game-card h3 {
+            margin-top: 15px;
+            font-size: 1.5em;
+            color: #00ffcc; 
+        }
+
+        .game-card p {
+            color: #07e0b1; 
+        }
+
+        .game-card span {
+            display: block;
+            margin-top: 5px;
+            font-weight: bold;
+            color: #ffffff; 
+        }
+
+        footer {
+            background-color: #1e1e1e; 
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="tienda.html">Tienda</a></li>
+            <li><a href="comunidad.html">Comunidad</a></li>
+            <li><a href="soporte.html">Soporte</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Catálogo de Juegos</h1>
+        <p>Explora nuestra amplia selección de juegos</p>
+    </header>
+
+    <main>
+        <div class="game-grid">
+            <div class="game-card">
+                <img src="imagenes/g1 (1).jpg" alt="Juego 1">
+                <h3>CALL OF DUTTY</h3>
+                <span>Género: Acción</span>
+                <p>Vive la adrenalina de las batallas épicas en este juego de acción trepidante.</p>
+            </div>
+
+            <div class="game-card">
+                <img src="imagenes/g2.jpg" alt="Juego 2">
+                <h3>BATTLEFIELD</h3>
+                <span>Género: Aventura</span>
+                <p>Explora tierras misteriosas y resuelve enigmas en esta épica aventura.</p>
+            </div>
+
+            <div class="game-card">
+                <img src="imagenes/g3.jpg" alt="Juego 3">
+                <h3>HALD</h3>
+                <span>Género: Estrategia</span>
+                <p>Construye tu imperio y domina a tus enemigos en tiempo real.</p>
+            </div>
+
+            <div class="game-card">
+                <img src="imagenes/g4.jpg" alt="Juego 4">
+                <h3>FORNITE</h3>
+                <span>Género: Simulación</span>
+                <p>Gestiona y expande tu civilización en un mundo futurista lleno de desafíos.</p>
+            </div>
+
+            <div class="game-card">
+                <img src="imagenes/g5.jpg" alt="Juego 5">
+                <h3>CTR</h3>
+                <span>Género: Carreras</span>
+                <p>Corre a toda velocidad en emocionantes circuitos llenos de desafíos.</p>
+            </div>
+
+            <div class="game-card">
+                <img src="imagenes/g7.jpg" alt="Juego 6">
+                <h3>THE SURGE</h3>
+                <span>Género: RPG</span>
+                <p>Sumérgete en un universo de fantasía, magia y poder con este RPG épico.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tu Plataforma de Juegos. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
